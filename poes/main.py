@@ -71,3 +71,39 @@ print(porosity_expon)
 #%% Visualize distributions
 plt.hist(porosity_lognorm, bins=100)
 plt.show()
+
+
+#%% Generate random values for Thickness h ESAU IDROVO
+# Random values using normal distribution
+h_norm = norm.rvs(loc=30, scale=0.5, size=1000)
+# Define minimun values
+h_norm = np.where(h_norm < 10, 10, h_norm)
+
+# Define maximum value
+h_norm = np.where(h_norm > 80, 80, h_norm)
+
+
+# Random values using lognormal distribution
+h_lognorm = lognorm.rvs(s=0.5, loc=0, scale=30, size=1000)
+
+h_lognorm = np.where(h_lognorm < 10, 10, h_lognorm)
+
+h_lognorm = np.where(h_lognorm > 80, 80, h_lognorm)
+
+
+
+# Random values using Exponential distribution
+h_expon = expon.rvs(loc=0, scale=30, size=1000)
+
+
+h_expon = np.where(h_expon < 10, 10, h_expon)
+
+h_expon = np.where(h_expon >80,80, h_expon)
+
+
+# Random values using Triangular distribution
+h_tri = triang.rvs(c=0.3, loc=10, scale= 80, size=1000)
+
+
+# Random values using uniform distribution
+h_uni = uniform.rvs(loc=10, scale=80, size=1000)

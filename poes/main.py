@@ -91,7 +91,6 @@ h_lognorm = np.where(h_lognorm < 10, 10, h_lognorm)
 h_lognorm = np.where(h_lognorm > 80, 80, h_lognorm)
 
 
-
 # Random values using Exponential distribution
 h_expon = expon.rvs(loc=0, scale=30, size=1000)
 

@@ -8,7 +8,7 @@ wb = xw.Book()
 
 
 # %% Select sheet to work
-sheet = wb.sheets["Sheet1"]
+sheet = wb.sheets["Hoja1"]
 
 
 # %% Modify an excell cell from Python
@@ -41,3 +41,4 @@ sheet["E13"].options(pd.DataFrame, expand="table", index=False).value = pd.DataF
 
 # %% Call the table from Excel to Python
 df = sheet["E13:G16"].options(pd.DataFrame, expand="table", index=False).value
+print(df)

@@ -106,3 +106,42 @@ h_tri = triang.rvs(c=0.3, loc=10, scale= 80, size=1000)
 
 # Random values using uniform distribution
 h_uni = uniform.rvs(loc=10, scale=80, size=1000)
+
+
+#%% Generate random values for Boi DIEGO RIVERA
+
+# Random values using normal distribution
+boi_norm = norm.rvs(loc=1.4, scale=0.5, size=1000)
+
+# Define minimun values
+boi_norm = np.where(boi_norm < 1.1, 1.1, boi_norm)
+
+# Define maximum value
+boi_norm = np.where(boi_norm > 2, 2, boi_norm)
+
+
+# Random values using lognormal distribution
+boi_lognorm = lognorm.rvs(s=0.1, loc=0, scale=1.2, size=1000)
+
+boi_lognorm = np.where(boi_lognorm < 1.1, 1.1, boi_lognorm)
+
+boi_lognorm = np.where(boi_lognorm > 2, 2, boi_lognorm)
+
+
+# Random values using Exponential distribution
+boi_expon = expon.rvs(loc=0, scale=1.2, size=1000)
+
+boi_expon = np.where(boi_expon < 1.1, 1.1, boi_expon)
+
+boi_expon = np.where(boi_expon > 2, 2, boi_expon)
+
+
+# Random values using Triangular distribution
+boi_tri = triang.rvs(c=0.3, loc=1.1, scale= 2, size=1000)
+
+
+# Random values using uniform distribution
+boi_uni = uniform.rvs(loc=1.1, scale=2, size=1000)
+
+
+print(boi_expon)

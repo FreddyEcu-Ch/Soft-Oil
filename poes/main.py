@@ -106,3 +106,28 @@ h_tri = triang.rvs(c=0.3, loc=10, scale= 80, size=1000)
 
 # Random values using uniform distribution
 h_uni = uniform.rvs(loc=10, scale=80, size=1000)
+
+#%% Kevin, drainage area
+
+# Normal distribution
+normal_DrainageArea=norm.rvs(loc=40,scale=0.5,size=1000);
+normal_DrainageArea=np.where(normal_DrainageArea<0,0,normal_DrainageArea);
+normal_DrainageArea=np.where(normal_DrainageArea>500,500,normal_DrainageArea);
+
+# Lognormal
+lognormal_DrainageArea=lognorm.rvs(s=0.5, loc=0, scale=0.05, size=1000);
+lognormal_DrainageArea=np.where(lognormal_DrainageArea<0,0,lognormal_DrainageArea);
+lognormal_DrainageArea=np.where(lognormal_DrainageArea>500,500,lognormal_DrainageArea);
+
+#Exponential
+expo_DrainageArea=expon.rvs(loc=0,scale=0.05,size=1000);
+expo_DrainageArea=np.where(expo_DrainageArea<0,0,expo_DrainageArea);
+expo_DrainageArea=np.where(expo_DrainageArea>500,500,expo_DrainageArea);
+
+#Triangular
+tri_DrainageArea=triang.rvs(c=0.3, loc=100, scale=500, size=1000);
+
+#Uniform
+uni_DrainageArea=uniform.rvs(loc=0, scale=500, size=1000);
+
+print(expo_DrainageArea);

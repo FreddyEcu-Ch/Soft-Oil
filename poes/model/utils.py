@@ -53,8 +53,8 @@ def param_stoiip(
     else:
         rng = np.random.default_rng(seed)
 
-    if df.loc[row, dist_col] == "Log-Normal" or df.loc[row, dist_col] == "Triangular":
-        if df.loc[row, dist_col] == "Log-Normal":
+    if df.loc[row, dist_col] == "Lognormal" or df.loc[row, dist_col] == "Triangular":
+        if df.loc[row, dist_col] == "Lognormal":
             param = lognorm.rvs(
                 s=df.loc[row, sc_col],
                 loc=df.loc[row, loc_col],

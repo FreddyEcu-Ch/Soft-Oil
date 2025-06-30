@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title('My first app using Python')
+st.title('My first app using Python.')
 
 st.subheader('App for Petroleum Engineering')
 

@@ -8,7 +8,7 @@ wb = xw.Book()
 
 
 # %% Select sheet to work
-sheet = wb.sheets["Hoja1"]
+sheet = wb.sheets["Sheet1"]
 
 
 # %% Modify an excell cell from Python
